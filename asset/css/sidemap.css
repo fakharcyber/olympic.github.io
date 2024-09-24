@@ -1,0 +1,148 @@
+.row {
+    display: flex; /* Use flexbox to align items in a row */
+    gap: 10px; /* Space between the columns */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    
+}
+
+.col1 {
+    background-color: purple;
+    width: 120px;
+    display: flex;
+    justify-content: center; /* Center horizontally inside the box */
+    align-items: center; /* Center vertically inside the box */
+    padding: 10px; /* Optional: adds padding inside the column */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    margin-top: -5px;
+    margin-left: 45px;
+    font-weight: bold;
+}
+
+.col1 a {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center; /* Center the text inside each link */
+}
+.olymc {
+    width: 1030px;
+    margin-left: 120px;
+    border-bottom: 2px solid black;
+    margin-top: -4px;
+   }
+   .olym{
+    width: 1000px;
+    height:50px;
+    margin-left: 630px;
+    border-left: 2px solid black;
+    margin-top: -28px; 
+   }
+   .olymp{
+    height: 50px;
+    border-left: 2px solid black;
+    margin-left: 150px;
+    margin-top: -5px;
+   
+   }
+ .row h1 {
+    background-color: blue;
+    color: white;
+    width: 120px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 565px;   
+    margin-top: 30px;
+   
+} 
+.col2{
+    background-color: purple;
+    width: 120px;
+    display: flex;
+    justify-content: center; /* Center horizontally inside the box */
+    align-items: center; /* Center vertically inside the box */
+    padding: 10px; /* Optional: adds padding inside the column */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+     margin-top: -35px; 
+     margin-bottom: 50px;
+    margin-left: 32.5%;
+   
+}
+.col2 a{
+
+    color: white;
+    text-decoration: none;
+}
+.col{
+  background-color: rgb(0, 0, 0);
+  width: 120px;
+  display: flex;
+  justify-content: center; /* Center horizontally inside the box */
+  align-items: center; 
+  padding: 10px;
+  box-sizing: border-box; 
+  margin-top: 1%;
+  margin-left: 45px;
+}
+.col{
+    color: white;
+}
+.col3{
+  background-color: rgb(0, 0, 0);
+  width: 120px;
+  display: flex;
+  justify-content: center; /* Center horizontally inside the box */
+  align-items: center; 
+  padding: 10px;
+  box-sizing: border-box; 
+  margin-top: -255px; 
+  margin-left: 220px;
+  
+}
+.col3{
+    color: white;
+}
+.col4{
+    background-color: rgb(0, 0, 0);
+    width: 120px;
+    display: flex;
+    justify-content: center; /* Center horizontally inside the box */
+    align-items: center; 
+    padding: 10px;
+    box-sizing: border-box; 
+    margin-top: -215px; 
+    margin-left: 570px;
+}
+.col4{
+    color: white;
+}
+.col5{
+    background-color: rgb(0, 0, 0);
+    width: 120px;
+    display: flex;
+    justify-content: center; /* Center horizontally inside the box */
+    align-items: center; 
+    padding: 10px;
+    box-sizing: border-box; 
+    margin-top: -4.4%; 
+    margin-bottom: 80px;
+    margin-left: 745px;
+}
+.col5{
+    color: white;
+}
+.col6{
+    background-color: rgb(0, 0, 0);
+    width: 120px;
+    display: flex;
+    justify-content: center; /* Center horizontally inside the box */
+    align-items: center; 
+    padding: 10px;
+    box-sizing: border-box; 
+    margin-top: -200px;
+    margin-left: 1095px;
+}
+.col6{
+    color: white;
+}

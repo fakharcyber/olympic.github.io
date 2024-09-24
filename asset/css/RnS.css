@@ -1,0 +1,207 @@
+/*navbar css start*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background-image: url(../img/about-img/purplefoot.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  nav {
+    background-image: linear-gradient(rgb(172, 0, 172), rgb(99, 0, 99));
+    box-shadow: 0px 1px 4px black;
+  }
+  
+  nav .box1 {
+    width: 45vw;
+    height: 65px;
+    background-image: linear-gradient(50deg, rgb(172, 0, 172), rgb(99, 0, 99));
+    z-index: -2;
+    position: absolute;
+    border-radius: 0 100% 0 0;
+    top: 0;
+    left: 0;
+  }
+  
+  nav .box2 {
+    width: 45vw;
+    height: 100px;
+    background-image: linear-gradient(40deg, rgb(172, 0, 172), rgb(99, 0, 99));
+    z-index: -2;
+    position: absolute;
+    border-radius: 0 0 0 100%;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .nav-link:hover{
+    color: white;
+  }
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: white;
+  }
+  .nav-link {
+    color: rgb(236, 236, 236);
+  }
+  
+  .navbar {
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  .navbar-brand img {
+    height: 40px;
+  }
+  
+  .navbar-toggler-icon {
+    background-size: 130%;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  #offcanvasNavbarLabel {
+    font-weight: bold;
+  }
+  #offcanvasNavbar{
+    background-color: purple;
+  }
+  .dropdown-menu {
+    background-image: linear-gradient(50deg, rgb(172, 0, 172), rgb(99, 0, 99));
+  }
+  .dropdown-item.active, .dropdown-item:active{
+    background-color: white;
+    color: black;
+  }
+  .dropdown-menu a {
+    color: rgb(0, 0, 0);
+  }
+  /*navbar css end*/
+
+
+/* footer start */
+#footer {
+  background-image: url(../img/about-img/purplefoot.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: purple;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  box-shadow: inset 0px 0px 4px rgb(0, 0, 0);
+}
+
+.col1 h4,
+.col2 h4,
+.col3 h4 {
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.col1 p,
+.col2 a,
+.col3 a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.col2 a {
+  color: #c7c7c7;
+}
+
+.col2 a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.col2 ul,
+.col3 ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.col2 li,
+.col3 li {
+  text-align: center;
+}
+
+.col3 ul {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col3 i {
+  font-size: 26px;
+  transition: color 0.4s;
+}
+
+.facebook-f i,
+.twitter i,
+.youtube i,
+.instagram i {
+  color: #ffffff;
+}
+
+.facebook-f:hover i {
+  color: blue
+}
+
+.twitter:hover i {
+  color: rgb(0, 225, 255)
+}
+
+.youtube:hover i {
+  color: red;
+}
+
+.instagram:hover i {
+  color: rgb(245, 0, 192);
+}
+
+.bottom-bar {
+  color: white;
+  background: rgba(128, 0, 128, 0.486);
+  text-align: center;
+}
+
+.bottom-bar p {
+  color: white;
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  #footer.container-fluid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col1 {
+    text-align: center;
+  }
+
+  .col3 ul {
+    align-items: center;
+  }
+}
+
+/* footer end */

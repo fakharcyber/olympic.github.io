@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olympic</title>
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="asset/css/RnS.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" type="image/x-icon" href="medal_champion_award_winner_olympic_icon_207786.ico" />
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="container-fluid" id="navbar">
+      <a class="navbar-brand" href="index.html"><img src="asset/img/logo.png" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Navigation Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav nav-underline justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="abouts.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Catagory
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="athelets.html">Athelets</a>
+                </li>
+                <li><a class="dropdown-item" href="games.html">Games</a></li>
+                <li><a class="dropdown-item active" aria-current="page" href="RnS.html">Records and Statistics</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sitemap.html">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar start -->
+
+  <!-- records start -->
+  <div class="container my-5 records">
+    <div class="row games-heading">
+      <div class="col mx-auto mt-auto">
+        <h2 class="fw-bold text-center text-light">Olympic Records & Statistics</h2>
+      </div>
+    </div>
+    <hr class="h-25 mb-3 opacity-100 border-light" />
+    <div class="row table-responsive">
+      <table class="table table-striped table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Sport</th>
+            <th scope="col">Athlete Name</th>
+            <th scope="col">Country</th>
+            <th scope="col">Event/Discipline</th>
+            <th scope="col">Record</th>
+            <th scope="col">Year</th>
+            <th scope="col">Olympic Games</th>
+            <!-- 7 heading  -->
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" id="tbody">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- records end -->
+
+
+
+  <!-- feedback start -->
+  <footer class="container-fluid" id="footer">
+    <div class="row">
+      <div class="col1">
+        <h4>Contact Us</h4>
+        <p>Email: info@example.com</p>
+        <p>Phone: +92 3244869065</p>
+        <p>Address: 45/1 Street no 89</p>
+      </div>
+    </div>
+    <div class="col2">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="abouts.html">About Us</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+    <div class="col3">
+      <h4>Follow Us</h4>
+      <ul>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div class="bottom-bar">
+    <p>&copy; 2024 Your Olympic Website. All rights reserved.</p>
+  </div>
+  <!-- feedback end -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/js/fetch.js"></script>
+  <script>
+    for (let a = 0; a < olympicRecords.length; a++) {
+      document.getElementById("tbody").innerHTML += `
+        <td>${olympicRecords[a].sport}</td>
+        <td>${olympicRecords[a].athleteName}</td>
+        <td>${olympicRecords[a].country}</td>
+        <td>${olympicRecords[a].event}</td>
+        <td>${olympicRecords[a].record}</td>
+        <td>${olympicRecords[a].year}</td>
+        <td>${olympicRecords[a].olympicGames}</td>
+      `
+    };
+  </script>
+</body>
+
+</html>

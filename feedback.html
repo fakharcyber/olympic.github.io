@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olympic</title>
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="asset/css/feedback.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" type="image/x-icon" href="medal_champion_award_winner_olympic_icon_207786.ico" />
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="container-fluid" id="navbar">
+      <a class="navbar-brand" href="index.html"><img src="asset/img/logo.png" alt="" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Navigation Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav nav-underline justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="abouts.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Catagory
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="athelets.html">Athelets</a>
+                </li>
+                <li><a class="dropdown-item" href="games.html">Games</a></li>
+                <li><a class="dropdown-item" href="RnS.html">Records and Statistics</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sitemap.html">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- feedback start form html-->
+  <div class="container">
+    <div class="feed">
+        <h1 class="text-light">Customer Feedback Form</h1>
+        <form id="feedback-form" action="javascript:void(0);" method="post">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>1. Personal Information</legend>
+                
+                <label for="first-name">First Name:</label>
+                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="John" required
+                    pattern="[A-Za-z]+" title="Please enter only alphabetic characters.">
+                <br>
+                
+                <label for="last-name">Last Name:</label>
+                <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Doe" required
+                    pattern="[A-Za-z]+" title="Please enter only alphabetic characters.">
+            </fieldset>
+
+            <!-- Feedback on Service Quality -->
+            <fieldset>
+                <legend>2. Feedback on Service Quality</legend>
+                <p>Please rate the quality of our service:</p>
+                <label><input type="radio" name="service-quality" value="excellent" required> Excellent</label>
+                <label><input type="radio" name="service-quality" value="very-good"> Very Good</label>
+                <label><input type="radio" name="service-quality" value="good"> Good</label>
+                <label><input type="radio" name="service-quality" value="average"> Average</label>
+                <label><input type="radio" name="service-quality" value="poor"> Poor</label>
+            </fieldset>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" placeholder="Write your message here" rows="4"
+                    required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+ <!-- feedback end form html-->
+  <!-- feedback form javascript start  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const firstNameInput = document.getElementById('first-name');
+        const lastNameInput = document.getElementById('last-name');
+
+        // Function to filter input value
+        function filterInput(value) {
+            return value.replace(/[^A-Za-z]/g, '');
+        }
+
+        // Handle input event for typing and pasting
+        function handleInput(event) {
+            const newValue = filterInput(event.target.value);
+            if (event.target.value !== newValue) {
+                event.target.value = newValue;
+            }
+        }
+
+        // Handle paste event
+        function handlePaste(event) {
+            event.preventDefault();
+            const pastedData = (event.clipboardData || window.clipboardData).getData('text');
+            event.target.value = filterInput(pastedData);
+        }
+
+        // Handle keydown event
+        function handleKeydown(event) {
+            const allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Tab'];
+            if (/^[A-Za-z]$/.test(event.key) || allowedKeys.includes(event.key)) {
+                return; // Allow alphabetic keys and control keys
+            }
+            event.preventDefault(); // Block other keys
+        }
+
+        // Event listeners for both input fields
+        [firstNameInput, lastNameInput].forEach(inputField => {
+            inputField.addEventListener('input', handleInput);
+            inputField.addEventListener('paste', handlePaste);
+            inputField.addEventListener('keydown', handleKeydown);
+        });
+
+        // Handle form submission
+        const form = document.getElementById('feedback-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            alert('Form Submitted\nThank you for your Feedback');
+
+            // Reload the page
+            window.location.reload();
+        });
+    });
+</script>
+   <!-- feedback form javascript end  -->
+  <!-- feedback start -->
+
+  <!-- footer start -->
+  <footer class="container-fluid" id="footer">
+    <div class="row">
+      <div class="col1">
+        <h4>Contact Us</h4>
+        <p>Email: info@example.com</p>
+        <p>Phone: +92 3244869065</p>
+        <p>Address: 45/1 Street no 89</p>
+      </div>
+    </div>
+    <div class="col2">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="abouts.html">About Us</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+    <div class="col3">
+      <h4>Follow Us</h4>
+      <ul>
+        <div class="facebook-f">
+          <li><a
+              href="https://www.bing.com/ck/a?!&&p=5a9b1603f17ce767JmltdHM9MTcyNDExMjAwMCZpZ3VpZD0yYjJhYzNkNC01MTkwLTYxZTYtMjdhMi1kNzQ2NTA0YjYwY2QmaW5zaWQ9NTIwNg&ptn=3&ver=2&hsh=3&fclid=2b2ac3d4-5190-61e6-27a2-d746504b60cd&psq=facebook+olympic&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL29seW1waWNzLw&ntb=1">
+              <i class="fa-brands fa-facebook-f"></i></a></li>
+        </div>
+        <div class="twitter">
+          <li><a
+              href="https://propakistani.pk/2024/08/09/twitter-rewards-rare-gold-badge-to-pakistans-olympic-champion-arshad-nadeem/">
+              <i class="fa-brands fa-twitter"></i></a></li>
+        </div>
+        <div class="youtube">
+          <li><a href="https://www.youtube.com/watch?v=ysIMlSTEfY8&pp=ygUNb2x5bXBpY3MgMjAyNA%3D%3D">
+              <i class="fa-brands fa-youtube"></i></a></li>
+        </div>
+        <div class="instagram">
+          <li><a
+              href="https://www.bing.com/ck/a?!&&p=d1ffbf91884fa9ccJmltdHM9MTcyNDExMjAwMCZpZ3VpZD0yYjJhYzNkNC01MTkwLTYxZTYtMjdhMi1kNzQ2NTA0YjYwY2QmaW5zaWQ9NTE5Nw&ptn=3&ver=2&hsh=3&fclid=2b2ac3d4-5190-61e6-27a2-d746504b60cd&psq=instagram+olympics&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9PbHltcGljcy8&ntb=1">
+              <i class="fa-brands fa-instagram"></i></a></li>
+        </div>
+      </ul>
+    </div>
+  </footer>
+  <div class="bottom-bar">
+    <p>&copy; 2024 Your Olympic Website. All rights reserved.</p>
+  </div>
+  <!-- footer end -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
